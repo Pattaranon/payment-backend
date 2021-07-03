@@ -3,7 +3,7 @@ package com.space.payment.models;
 import lombok.Data;
 
 @Data
-public class ListMenuModel extends BaseModel {
+public class ListMenuRequest extends BaseModel {
 
     private String listMenuId;
     private String listMenuName;
