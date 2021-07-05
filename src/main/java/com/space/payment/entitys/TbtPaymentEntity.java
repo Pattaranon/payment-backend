@@ -22,14 +22,14 @@ public class TbtPaymentEntity extends BaseEntity implements Serializable {
     @Column(name = "id", length = 100)
     private String Id;
 
-    @Column(name = "list_menu_id", nullable = false, unique = true, length = 150)
-    private String listMenuId;
-
-    @Column(name = "price_per_month")
-    private float pricePerMonth;
+    @Column(name = "menu_id", nullable = false, unique = true, length = 150)
+    private String menuId;
 
     @Column(name = "payment_id", nullable = false, unique = true, length = 150)
     private String paymentId;
+
+    @Column(name = "price_per_month")
+    private float pricePerMonth;
 
     @Column(name = "is_pay")
     private boolean isPay;
