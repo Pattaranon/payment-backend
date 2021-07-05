@@ -18,7 +18,7 @@ public abstract class BaseEntity {
     }
 
     @Column(name = "is_active")
-    private String isActive;
+    private Boolean isActive;
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "create_date")
     private Date createDate;

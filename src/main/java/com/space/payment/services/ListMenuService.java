@@ -29,6 +29,7 @@ public class ListMenuService {
         entity.setListMenuName(listMenuRequest.getListMenuName());
         entity.setCreateBy(listMenuRequest.getCreateBy());
         entity.setCreateDate(DateUtil.asDate(LocalDate.now()));
+        entity.setIsActive(listMenuRequest.getIsActive());
         entity.setUpdateBy(listMenuRequest.getUpdateBy());
         entity.setUpdateDate(DateUtil.asDate(LocalDate.now()));
 
