@@ -6,7 +6,6 @@ import java.time.LocalDate;
 
 @Data
 public class BaseModel {
-
     private String isActive;
     private LocalDate createDate;
     private String createBy;

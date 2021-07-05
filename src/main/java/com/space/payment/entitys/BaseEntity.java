@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Data
@@ -14,7 +15,6 @@ public abstract class BaseEntity {
 
     public BaseEntity() {
         // Constructor Method
-
     }
 
     @Column(name = "is_active")
