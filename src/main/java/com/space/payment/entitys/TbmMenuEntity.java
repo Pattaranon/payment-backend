@@ -25,4 +25,10 @@ public class TbmMenuEntity extends BaseEntity implements Serializable {
 
     @Column(name = "menu_name", nullable = false, length = 250)
     private String menuName;
+
+    @Column(name = "account_no", length = 30)
+    private String accountNo;
+
+    @Column(name = "bank_name", length = 250)
+    private String bankName;
 }

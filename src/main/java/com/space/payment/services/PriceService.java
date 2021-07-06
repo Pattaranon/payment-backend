@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Service
 @Slf4j
@@ -27,10 +28,10 @@ public class PriceService {
         entity.setMenuId(priceRequest.getMenuId());
         entity.setPrice(priceRequest.getPrice());
         entity.setCreateBy(priceRequest.getCreateBy());
-        entity.setCreateDate(DateUtil.asDate(LocalDate.now()));
+        entity.setCreateDate(DateUtil.asDate(LocalDateTime.now()));
         entity.setIsActive(priceRequest.getIsActive());
         entity.setUpdateBy(priceRequest.getUpdateBy());
-        entity.setUpdateDate(DateUtil.asDate(LocalDate.now()));
+        entity.setUpdateDate(DateUtil.asDate(LocalDateTime.now()));
 
         return repository.save(entity);
     }

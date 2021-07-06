@@ -2,10 +2,10 @@ package com.space.payment.models;
 
 import lombok.Data;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Data
 public class PriceResponse extends ResponseStatus {
     public String priceId;
-    public LocalDate replyTimeStamp;
+    public LocalDateTime replyTimeStamp;
 }

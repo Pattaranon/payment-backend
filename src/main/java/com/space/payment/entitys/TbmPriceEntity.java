@@ -23,7 +23,7 @@ public class TbmPriceEntity extends BaseEntity implements Serializable {
     @Column(name = "price_id", nullable = false, unique = true, length = 150)
     private String priceId;
 
-    @Column(name = "menu_id", nullable = false, unique = true, length = 150)
+    @Column(name = "menu_id", nullable = false, length = 150)
     private String menuId;
 
     @Column(name = "price", length = 350)

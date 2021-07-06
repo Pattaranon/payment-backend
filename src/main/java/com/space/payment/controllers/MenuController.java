@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Optional;
 
 @RestController
@@ -40,7 +41,7 @@ public class MenuController {
             response.setResponseMessage("Fail create menu");
         }
 
-        response.setReplyTimeStamp(LocalDate.now());
+        response.setReplyTimeStamp(LocalDateTime.now());
         return ResponseEntity.ok(response);
     }
 }

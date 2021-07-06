@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 @RestController
 @RequestMapping("/api/v1")
 public class PriceController {
@@ -27,6 +30,18 @@ public class PriceController {
     @PostMapping("/price")
     public ResponseEntity<PriceResponse> createPrice(@RequestBody PriceRequest priceRequest) throws BaseException {
         PriceResponse response = priceBiz.createPrice(priceRequest);
+        if(response.getPriceId() != null) {
+            response.setResponseStatusCode("SUCCESS");
+            response.setResponseCode("PAYMENT-SUCCESS-CREATE-PRICE");
+            response.setResponseMessage("Successfully.");
+        }
+        else {
+            response.setResponseStatusCode("FAIL");
+            response.setResponseCode("PAYMENT-FAIL-CREATE-PRICE:001");
+            response.setResponseMessage("Fail create price");
+        }
+
+        response.setReplyTimeStamp(LocalDateTime.now());
         return ResponseEntity.ok(response);
     }
 }
