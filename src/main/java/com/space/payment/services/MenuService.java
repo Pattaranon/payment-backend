@@ -22,8 +22,7 @@ public class MenuService {
 
     public TbmMenuEntity createMenu(MenuRequest menuRequest) throws BaseException {
         TbmMenuEntity entity = new TbmMenuEntity();
-        entity.setMenuId(menuRequest.getListMenuId());
-        entity.setMenuName(menuRequest.getListMenuName());
+        entity.setMenuName(menuRequest.getMenuName());
         entity.setCreateBy(menuRequest.getCreateBy());
         entity.setCreateDate(DateUtil.asDate(LocalDate.now()));
         entity.setIsActive(menuRequest.getIsActive());

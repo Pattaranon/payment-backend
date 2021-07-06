@@ -10,11 +10,14 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.net.http.HttpResponse;
+
 @Service
 @Slf4j
 public class MenuBiz {
     public MenuMapper menuMapper;
     public MenuService menuService;
+
     @Autowired
     public MenuBiz(MenuMapper menuMapper, MenuService menuService) {
         this.menuMapper = menuMapper;
@@ -22,7 +25,6 @@ public class MenuBiz {
     }
 
     public MenuResponse createMenu(MenuRequest menuRequest) throws BaseException {
-        TbmMenuEntity menuEntity = menuService.createMenu(menuRequest);
-        return menuMapper.toMenuResponse(menuEntity);
+        return menuMapper.toMenuResponse(menuService.createMenu(menuRequest));
     }
 }

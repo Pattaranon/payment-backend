@@ -7,7 +7,7 @@ public class ListMenuException extends BaseException {
     }
 
     // CREATE
-    public static ListMenuException createListMenuIdDuplicated() {
-        return new ListMenuException("create.listmenuId.duplicated");
+    public static ListMenuException createListMenuNameDuplicated() {
+        return new ListMenuException("create.menuName.duplicated");
     }
 }

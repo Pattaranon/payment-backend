@@ -24,7 +24,6 @@ public class PriceService {
 
     public TbmPriceEntity createPrice(PriceRequest priceRequest) throws BaseException {
         TbmPriceEntity entity = new TbmPriceEntity();
-        entity.setPriceId(priceRequest.getPriceId());
         entity.setMenuId(priceRequest.getMenuId());
         entity.setPrice(priceRequest.getPrice());
         entity.setCreateBy(priceRequest.getCreateBy());

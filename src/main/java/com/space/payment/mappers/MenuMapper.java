@@ -6,6 +6,5 @@ import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
 public interface MenuMapper {
-
     MenuResponse toMenuResponse(TbmMenuEntity listMenuEntity);
 }

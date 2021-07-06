@@ -6,13 +6,6 @@ import java.time.LocalDate;
 
 @Data
 public class MenuResponse extends ResponseStatus {
-    public ResponseStatus responseStatus;
-    public ResponseDetail responseDetail;
-
-    @Data
-    public class ResponseDetail
-    {
-        public String menuId;
-        public LocalDate replyTimeStamp;
-    }
+    public String menuId;
+    public LocalDate replyTimeStamp;
 }

@@ -2,11 +2,9 @@ package com.space.payment.entitys;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
@@ -16,9 +14,12 @@ import java.io.Serializable;
 public class TbtPaymentEntity extends BaseEntity implements Serializable {
 
     public TbtPaymentEntity() {
+        // Create constructor
     }
 
     @Id
+    @GeneratedValue(generator = "uuid2")
+    @GenericGenerator(name = "uuid2", strategy = "org.hibernate.id.UUIDGenerator")
     @Column(name = "id", length = 100)
     private String Id;
 
