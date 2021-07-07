@@ -10,19 +10,17 @@ import java.io.Serializable;
 @Entity
 @EqualsAndHashCode(callSuper = true)
 @Data
-@Table(name = "tb_m_menu")
-public class TbmMenuEntity extends BaseEntity implements Serializable {
-
-    public TbmMenuEntity() {
-        // Create constructor
-    }
-
+@Table(name = "tb_m_bank")
+public class TbmBankEntity extends BaseEntity implements Serializable {
     @Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "org.hibernate.id.UUIDGenerator")
-    @Column(name = "menu_id", nullable = false, unique = true, length = 150)
-    private String menuId;
+    @Column(name = "bank_id", nullable = false, unique = true, length = 150)
+    private String bankId;
 
-    @Column(name = "menu_name", nullable = false, length = 250)
-    private String menuName;
+    @Column(name = "bank_name", length = 250)
+    private String bankName;
+
+    @Column(name = "account_no", length = 30)
+    private String accountNo;
 }

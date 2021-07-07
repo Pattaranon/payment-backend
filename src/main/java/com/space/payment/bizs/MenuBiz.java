@@ -17,8 +17,8 @@ import java.util.Optional;
 @Service
 @Slf4j
 public class MenuBiz {
-    public MenuMapper menuMapper;
-    public MenuService menuService;
+    private MenuMapper menuMapper;
+    private MenuService menuService;
 
     @Autowired
     public MenuBiz(MenuMapper menuMapper, MenuService menuService) {

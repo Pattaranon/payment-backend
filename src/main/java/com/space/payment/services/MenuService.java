@@ -31,8 +31,6 @@ public class MenuService {
     public TbmMenuEntity createMenu(MenuRequest menuRequest) throws BaseException {
         TbmMenuEntity entity = new TbmMenuEntity();
         entity.setMenuName(menuRequest.getMenuName());
-        entity.setAccountNo(menuRequest.getAccountNo());
-        entity.setBankName(menuRequest.getBankName());
         entity.setCreateBy(menuRequest.getCreateBy());
         entity.setCreateDate(DateUtil.asDate(LocalDateTime.now()));
         entity.setIsActive(menuRequest.getIsActive());

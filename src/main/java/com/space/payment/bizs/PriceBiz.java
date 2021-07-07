@@ -18,8 +18,9 @@ import org.springframework.stereotype.Service;
 @Service
 @Slf4j
 public class PriceBiz {
-    public PriceMapper priceMapper;
-    public PriceService priceService;
+    private PriceMapper priceMapper;
+    private PriceService priceService;
+
     @Autowired
     public PriceBiz(PriceMapper priceMapper, PriceService priceService) {
         this.priceMapper = priceMapper;
